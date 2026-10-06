@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#07031a" />
+    <title>Möbius Kart</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="hud">
+      <div id="pos"></div>
+      <div id="top-right">
+        <div id="lap"></div>
+        <div id="time"></div>
+        <canvas id="minimap" width="240" height="240"></canvas>
+      </div>
+      <div id="top-center">
+        <div id="item"></div>
+        <div id="side"></div>
+        <div id="link">⟷ SLIPSTREAM</div>
+      </div>
+      <div id="thump-key"><b>Q</b> THUMP</div>
+      <div id="tilt-meter"><div id="tilt-needle"></div></div>
+      <div id="msg"></div>
+    </div>
+
+    <button id="sound"></button>
+
+    <div id="controls">
+      <div id="steer-zone"><div id="knob"></div><span class="hint" id="steer-hint">drag to steer</span></div>
+      <div id="buttons">
+        <button id="btn-thump">THUMP</button>
+        <button id="btn-brake">BRAKE</button>
+        <button id="btn-item">ITEM</button>
+      </div>
+    </div>
+
+    <div id="title" class="screen">
+      <h1>MÖBIUS<span>KART</span></h1>
+      <p class="credit">Dreamed up by <b>Ethan</b></p>
+      <p class="tag">Now racing <b>Ethan's Loop</b>: one track, one side, twice around per lap.</p>
+      <button id="start">RACE!</button>
+      <button id="how-to" class="pill">HOW TO PLAY</button>
+      <button id="steer-mode" class="pill"></button>
+      <p id="steer-note" class="touch-hint"></p>
+      <p class="keys">← → steer · Space item · Q thump · ↓ brake · M sound</p>
+      <p class="touch-hint">THUMP (or flick the phone up) when a kart is on the floor below you. When one thumps you, THUMP right as it hits to bounce.</p>
+    </div>
+
+    <div id="tutorial" class="hidden">
+      <div class="tut-head">
+        <span id="tut-step"></span>
+        <span>
+          <button id="tut-skip">skip ▸</button>
+          <button id="tut-exit" aria-label="Quit tutorial">✕</button>
+        </span>
+      </div>
+      <h3 id="tut-title"></h3>
+      <p id="tut-text"></p>
+      <p id="tut-todo"></p>
+      <div class="tut-actions">
+        <button id="tut-next">NEXT ▸</button>
+        <button id="tut-race">RACE!</button>
+        <button id="tut-menu">MENU</button>
+      </div>
+    </div>
+
+    <div id="results" class="screen hidden">
+      <h2>RESULTS</h2>
+      <p id="results-note"></p>
+      <ol id="results-list"></ol>
+      <button id="again">RACE AGAIN</button>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
